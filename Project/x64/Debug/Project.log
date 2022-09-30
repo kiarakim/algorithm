@@ -1,3 +1,2 @@
-﻿  1181.cpp
-D:\myData\baekjoon\Project\1181.cpp(17,25): warning C4267: '초기화 중': 'size_t'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+﻿  10814.cpp
   Project.vcxproj -> D:\myData\baekjoon\Project\x64\Debug\Project.exe
