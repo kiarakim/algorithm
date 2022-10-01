@@ -16,7 +16,7 @@ int main() {
 		int age;
 		string name;
 		cin >> age >> name;
-
+		 
 		v.push_back({ age, i });
 		str.push_back(name);
 	}
