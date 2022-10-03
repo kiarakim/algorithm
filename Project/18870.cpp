@@ -6,7 +6,7 @@ using namespace std;
 int main() {
 
 	vector<int> ori;
-	vector<int> v;
+	vector<int> v; 
 	int N, n;
 	cin >> N;
 
