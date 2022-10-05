@@ -1,30 +1,49 @@
+//#include<iostream>
+//using namespace std;
+//
+//void callByReference(int& a) {
+//	a++;
+//	a += 3;
+//	a /= 2;
+//	cout << "callByReference\n";
+//	cout << "a : " << a << "\n";
+//	cout << "a林家 : " << &a << "\n\n";
+//
+//}
+//
+//int main() {
+//
+//	int a = 5;
+//	callByReference(a);
+//
+//	cout << "main\n";
+//	cout << "a : " << a << "\n";
+//	cout << "a林家 : " << &a << "\n\n";
+//
+//	return 0;
+//}
+
 #include<iostream>
 using namespace std;
 
-int a, b;
-int used[4];
-int path[2];
+void callByValue(int a) {
+	a++;
+	a += 3;
+	a /= 2;
+	cout << "callByValue\n";
+	cout << "a : " << a << "\n";
+	cout << "a林家 : " << &a << "\n\n";
 
-void run(int lev) {
-	if (lev == 2) {
-		cout << path[0] << ' ' << path[1] << "\n";
-		return;
-	}
-
-	for (int i = 0; i < a; i++) {
-		if (used[i] == 1) continue;
-		used[i] = 1;
-		path[lev] = i + 1;
-		run(lev + 1);
-		used[i] = 0;
-	}
 }
 
 int main() {
 
-	cin >> a >> b;
+	int a = 5;
+	callByValue(a);
 
-	run(0);
+	cout << "main\n";
+	cout << "a : " << a << "\n";
+	cout << "a林家 : " << &a << "\n\n";
 
 	return 0;
 }
