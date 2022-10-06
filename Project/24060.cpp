@@ -1,5 +1,4 @@
 #include<iostream>
-#include<vector>
 using namespace std;
 
 void merge_sort(int* A, int start, int end);
@@ -39,7 +38,7 @@ void merge_sort(int* A, int start, int end) {
 void merge(int* A, int p, int q, int r) {
 	//int tmp[N];
 	//vector<int> tmp;
-	int* tmp = new int[r + 2];
+	int* tmp = new int[r + 2]; // 동적 할당!@!@!@!@
 
  	int i = p; int j = q + 1; int t = 1;
 	while (i <= q && j <= r) {
