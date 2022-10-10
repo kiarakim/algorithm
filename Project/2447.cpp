@@ -10,7 +10,7 @@ void star(int i, int j, int num)
         if (num / 3 == 0)
             cout << '*';
         else
-            star(i, j, num / 3);
+            star(i, j, num / 3); 
     }
 }
 int main() {
