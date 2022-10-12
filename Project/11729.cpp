@@ -13,7 +13,7 @@ void hanoi(int n, int start, int to, int bypass)
 }
 int main() {
     int num;
-    cin >> num;
+    cin >> num; 
     cout << (1 << num) - 1 << "\n";
     hanoi(num, 1, 3, 2);
 }
