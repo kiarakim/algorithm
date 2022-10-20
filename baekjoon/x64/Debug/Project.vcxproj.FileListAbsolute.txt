@@ -1,2 +1,0 @@
-C:\myData\2022\baekjoon\Project\x64\Debug\Project.exe
-D:\myData\baekjoon\Project\x64\Debug\Project.exe
