@@ -1,5 +1,6 @@
 //#include<iostream>
 //using namespace std;
+//í•œê¸€ ê¹¨ì§€ë‚˜
 //
 //void callByReference(int& a) {
 //	a++;
@@ -7,7 +8,7 @@
 //	a /= 2;
 //	cout << "callByReference\n";
 //	cout << "a : " << a << "\n";
-//	cout << "aÁÖ¼Ò : " << &a << "\n\n";
+//	cout << "aï¿½Ö¼ï¿½ : " << &a << "\n\n";
 //
 //}
 //
@@ -18,7 +19,7 @@
 //
 //	cout << "main\n";
 //	cout << "a : " << a << "\n";
-//	cout << "aÁÖ¼Ò : " << &a << "\n\n";
+//	cout << "aï¿½Ö¼ï¿½ : " << &a << "\n\n";
 //
 //	return 0;
 //}
@@ -32,7 +33,7 @@ void callByValue(int a) {
 	a /= 2;
 	cout << "callByValue\n";
 	cout << "a : " << a << "\n";
-	cout << "aÁÖ¼Ò : " << &a << "\n\n";
+	cout << "aï¿½Ö¼ï¿½ : " << &a << "\n\n";
 
 }
 
@@ -43,7 +44,7 @@ int main() {
 
 	cout << "main\n";
 	cout << "a : " << a << "\n";
-	cout << "aÁÖ¼Ò : " << &a << "\n\n";
+	cout << "aï¿½Ö¼ï¿½ : " << &a << "\n\n";
 
 	return 0;
 }
