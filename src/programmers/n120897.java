@@ -1,6 +1,8 @@
 package programmers;
 
+import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.List;
 
 public class n120897 {
     public static void main(String[] args) {
@@ -10,7 +12,18 @@ public class n120897 {
     }
 
     public int[] solution(int n) {
-        int[] answer = {};
-        return answer;
+        List<Integer> list = new ArrayList<>();
+        int N = 1;
+
+        while (N <= n) {
+            if (n % N == 0) {
+                list.add(N);
+            }
+            N++;
+        }
+
+        return list.stream()
+                .mapToInt(i -> i)
+                .toArray();
     }
 }
