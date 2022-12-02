@@ -11,43 +11,32 @@ public class n2477 {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         StringTokenizer st;
 
-        int N = Integer.parseInt(br.readLine());
-        int[] arr = new int[6];
-        int MaxWidthI = 0, MaxWidth = 0, MaxHeight = 0, MaxHeightI = 0, d;
+        int maxHeight = 0, maxWidth = 0;
+        int heightIdx = -1, widthIdx = -1;
+
+        int[] dist = new int[6];
+
+        int K = Integer.parseInt(br.readLine());
         for (int i = 0; i < 6; i++) {
             st = new StringTokenizer(br.readLine());
-            d = Integer.parseInt(st.nextToken());
-            arr[i] = Integer.parseInt(st.nextToken());
-            //가장 긴 가로의 길이와 위치 찾기
-            if ((d == 1 || d == 2) && MaxWidth < arr[i]) {
-                MaxWidth = arr[i];
-                MaxWidthI = i;
-            }
-            //가장 긴 세로의 길이와 위치 찾기
-            else if ((d == 3 || d == 4) && MaxHeight < arr[i]) {
-                MaxHeight = arr[i];
-                MaxHeightI = i;
+            int D = Integer.parseInt(st.nextToken());
+            dist[i] = Integer.parseInt(st.nextToken());
+
+            if (D == 1 || D == 2) {
+                if (maxHeight < dist[i]) {
+                    maxHeight = dist[i];
+                    heightIdx = i;
+                }
+            } else {
+                if (maxWidth < dist[i]) {
+                    maxWidth = dist[i];
+                    widthIdx = i;
+                }
             }
         }
+        int square = maxHeight * maxWidth;
+        int minSquare = dist[(heightIdx + 3) % 6] * dist[(widthIdx + 3) % 6];
 
-        int right, left, minWidth, minHeight;
-
-        if (MaxWidthI + 1 == 6) right = 0;
-        else right = MaxWidthI + 1;
-
-        if (MaxWidthI - 1 == -1) left = 5;
-        else left = MaxWidthI - 1;
-        //빈 사각형의 세로 길이
-        minHeight = Math.abs(arr[right] - arr[left]);
-
-        if (MaxHeightI + 1 == 6) right = 0;
-        else right = MaxHeightI + 1;
-
-        if (MaxHeightI - 1 == -1) left = 5;
-        else left = MaxHeightI - 1;
-        //빈 사각형의 가로 길이
-        minWidth = Math.abs(arr[right] - arr[left]);
-
-        System.out.println(((MaxWidth * MaxHeight) - (minHeight * minWidth)) * N);
+        System.out.println((square - minSquare) * K);
     }
 }
