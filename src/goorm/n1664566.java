@@ -6,6 +6,7 @@ package goorm;
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.util.Arrays;
+import java.util.Comparator;
 import java.util.StringTokenizer;
 
 public class n1664566 {
@@ -21,7 +22,7 @@ public class n1664566 {
             dic[i] = br.readLine();
         }
 
-        Arrays.sort(dic, (String s1, String s2) -> s1.length() - s2.length());
+        Arrays.sort(dic, Comparator.comparingInt(String::length));
         System.out.println(dic[k - 1]);
     }
 }
