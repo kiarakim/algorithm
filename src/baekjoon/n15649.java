@@ -22,7 +22,6 @@ public class n15649 {
         visited = new boolean[N];
 
         dfs(0);
-
         System.out.print(sb);
     }
 
