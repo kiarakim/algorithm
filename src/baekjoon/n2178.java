@@ -32,41 +32,37 @@ public class n2178 {
         visited = new boolean[N][M];
         visited[0][0] = true;
 
-        bfs(0, 0);
+        BFS(0, 0);
         System.out.println(maze[N - 1][M - 1]);
     }
 
-    public static void bfs(int y, int x) {
-        Queue<Node> q = new LinkedList<>();
-        q.offer(new Node(y, x));
+    static void BFS(int x, int y) {
+        Queue<Node> queue = new LinkedList<>();
+        queue.offer(new Node(x, y));
         visited[y][x] = true;
 
-        while (!q.isEmpty()) {
-            Node node = q.poll();
+        while (!queue.isEmpty()) {
+            Node now = queue.poll();
 
             for (int i = 0; i < 4; i++) {
-                int dy = node.y + dirY[i];
-                int dx = node.x + dirX[i];
+                int dx = now.x + dirX[i];
+                int dy = now.y + dirY[i];
 
                 if (dx < 0 || dy < 0 || dx >= M || dy >= N) continue;
                 if (visited[dy][dx] || maze[dy][dx] == 0) continue;
-                q.offer(new Node(dy, dx));
                 visited[dy][dx] = true;
-
-                maze[dy][dx] = maze[node.y][node.x] + 1;
-                if(visited[N - 1][M - 1])
-                    return;
+                maze[dy][dx] += maze[now.y][now.x];
+                queue.offer(new Node(dx, dy));
             }
         }
     }
 
     static class Node {
-        int y, x;
+        int x, y;
 
-        public Node(int y, int x) {
-            this.y = y;
+        public Node(int x, int y) {
             this.x = x;
+            this.y = y;
         }
     }
-
 }
