@@ -1,13 +1,13 @@
 package baekjoon;
 
-// [2차원 배열] 행렬 덧셈
+
 
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.StringTokenizer;
 
-public class no_2738 {
+public class 행렬덧셈 {
 
     public static void main(String[] args) throws IOException {
 
