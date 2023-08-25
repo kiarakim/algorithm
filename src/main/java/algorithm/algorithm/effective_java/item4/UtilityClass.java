@@ -1,0 +1,7 @@
+package algorithm.algorithm.effective_java.item4;
+
+public class UtilityClass {
+	private UtilityClass(){
+		throw new AssertionError();
+	}
+}
