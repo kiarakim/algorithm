@@ -1,4 +1,4 @@
-package algo.baekjoon;
+package algo.baekjoon.set1;
 
 import java.io.BufferedReader;
 import java.io.IOException;
