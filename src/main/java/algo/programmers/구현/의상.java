@@ -1,4 +1,4 @@
-package algo.programmers.해시;
+package algo.programmers.구현;
 
 import java.util.ArrayList;
 import java.util.HashMap;
